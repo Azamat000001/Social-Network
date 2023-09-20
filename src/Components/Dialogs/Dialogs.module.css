@@ -1,0 +1,42 @@
+
+
+.dialogs {
+   display: grid;
+   grid-template-columns: 2fr 10fr;
+
+
+}
+
+.dialog {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    border: 1px solid rgb(87, 87, 87);
+  
+    padding-top: 10px;
+}
+
+.dialog img {
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid rgb(87, 87, 87);
+}
+
+.dialog .active {
+    color:gold
+}
+
+.dialogsItem {
+    padding: 10px;
+}
+
+.masseges  {
+    padding: 10px;
+}
+
+
+
+.massege {
+    color:white;
+}
