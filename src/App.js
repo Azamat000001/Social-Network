@@ -10,7 +10,7 @@ import Music from './Components/Music/Music';
 import Sittings from './Components/Sittings/Sittings'
 import { Route, Routes } from 'react-router-dom'
 import Spinner from './Components/Spinner/Spiner';
-import { addPost } from './redux/state';
+import { addPost } from './redux/store';
 
 
 
