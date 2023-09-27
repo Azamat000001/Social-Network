@@ -2,10 +2,10 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import Dialogitem from './DialogsItem/DialogsItem';
 import Message from './Massege/Massege';
-import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/dialogsReducer';
+
 
 const Dialogs = (props) => {
-    let state = props.store.getState().dialogsPage
+    let state = props.dialogsPage
 
     let dialogsElements = state.dialogs.map(d => (<Dialogitem img={d.img} name={d.name} id={d.id} />));
 
@@ -15,11 +15,11 @@ const Dialogs = (props) => {
 
 
     let onSendMessageClick = () => {
-        props.store.dispatch(sendMessageCreator())
+        props.sendMessage()
     }
     let onNewMessageChange = (event) => {
         let body = event.target.value
-        props.store.dispatch(updateNewMessageBodyCreator(body))
+        props.updateNewMessageBody(body)
     }
     return (
         <div className={classes.dialogs}>
