@@ -5,13 +5,12 @@ import App from './App';
 import store from './redux/redux-store';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-
-
- let rerenderEntireTree = (state) => {
     root.render(
       <React.StrictMode>
         <BrowserRouter>
@@ -21,12 +20,3 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
         </BrowserRouter>
       </React.StrictMode>
     );
-    
- }
-
-rerenderEntireTree(store.getState());
-
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
