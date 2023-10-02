@@ -9,6 +9,7 @@ import Sittings from './Components/Sittings/Sittings'
 import { Route, Routes } from 'react-router-dom'
 import Spinner from './Components/Spinner/Spiner';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
+import UsersContainer from './Components/Users/UsersContainer';
 
 
 
@@ -32,6 +33,7 @@ function App (){
           <Route path='/Music' element={ <Music/> }/>
           <Route path='/Sittings' element={ <Sittings/> }/>
           <Route path='/Spinner' element={ <Spinner/> } />
+          <Route path='/Users' element={ <UsersContainer/> }/>
         </Routes>
       </div>
  
